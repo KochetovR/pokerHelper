@@ -1,0 +1,42 @@
+.header__list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.header__btn {
+    font-size: 65px;
+    
+    &.bb-def {
+        color: orange;
+    }
+
+    &.bvb {
+        color: yellow;
+    }
+
+    &.vs-open {
+        color: green;
+    }
+
+    &.vs3bet {
+        color: palegreen;
+    }
+
+    &.push-fold {
+        color: blue;
+    }
+
+    &.sqz {
+        color: rgb(0, 153, 255);
+    }
+
+    &.rfi {
+        color: rgb(255, 38, 0);
+    }
+}

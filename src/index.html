@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Helper</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -11,9 +11,35 @@
       crossorigin="anonymous"
     />
   </head>
+  <header>
+    <ul class="header__list container">
+      <li class="header__item">
+        <button type="button" data="bb-def" class="header__btn bb-def">BB def</button>
+      </li>
+      <li class="header__item">
+        <button type="button" data="bvb" class="header__btn bvb">BvB</button>
+      </li>
+      <li class="header__item">
+        <button type="button" data="vs-open" class="header__btn vs-open">vsOpen</button>
+      </li>
+      <li class="header__item">
+        <button type="button" data="vs3bet" class="header__btn vs3bet">vs3Bet</button>
+      </li>
+      <li class="header__item">
+        <button type="button" data="push-fold" class="header__btn push-fold">Push/Fold</button>
+      </li>
+      <li class="header__item">
+        <button type="button" data="sqz" class="header__btn sqz">SQZ</button>
+      </li>
+      <li class="header__item">
+        <button type="button" data="rfi" class="header__btn rfi">RFI</button>
+      </li>
+    </ul>
+  </header>
   <body>
+    
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
