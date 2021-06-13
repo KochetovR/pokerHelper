@@ -6,7 +6,6 @@ const rfiBtn = document.querySelector('[data="rfi"]')
 const resImg = document.querySelector('.lightbox__image')
 const divBox = document.querySelector('.js-lightbox')
 const backdropDiv = document.querySelector('.lightbox__overlay')
-const closeBtn = document.querySelector('[data-action="close-lightbox"]')
 const homeBtn = document.querySelector('.home__btn')
 const boxContent = document.querySelector('.js-box-content')
 
@@ -58,19 +57,14 @@ function openModal () {
 function onClickGenerateBtn() { 
     resImg.src=`${images[stackBB][pos]}`
     divBox.classList.add('is-open')
-    closeBtn.addEventListener('click', onCloseBtnClick);
 }
 
-function onCloseBtnClick() {
-    divBox.classList.remove('is-open')
-    resImg.src=''
-    resImg.alt=''
-    // window.removeEventListener('keydown', onEscKeyPress)
-}
 
 backdropDiv.addEventListener('click', onBackdropClick)
 function onBackdropClick(ev) {
     if(ev.currentTarget === ev.target) {
-        onCloseBtnClick()
+        divBox.classList.remove('is-open')
+        resImg.src=''
+        resImg.alt=''
     }
 }

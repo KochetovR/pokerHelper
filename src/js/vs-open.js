@@ -12,7 +12,6 @@ const vsOpenBtn = document.querySelector('[data="vs-open"]')
 const resImg = document.querySelector('.lightbox__image')
 const divBox = document.querySelector('.js-lightbox')
 const backdropDiv = document.querySelector('.lightbox__overlay')
-const closeBtn = document.querySelector('[data-action="close-lightbox"]')
 const homeBtn = document.querySelector('.home__btn')
 const boxContent = document.querySelector('.js-box-content')
 
@@ -104,6 +103,7 @@ function onClickPositionBtn(e) {
 function onSelectRaiser(e) {
     const optionIndexRaiser = e.target.options.selectedIndex
     raiser = e.target.options[optionIndexRaiser].value
+    console.log(raiser)
 }
 
 
@@ -115,19 +115,13 @@ function openModal () {
 function onClickGenerateBtn() {
     resImg.src=`${images[stackBB][pos][raiser]}`;
     divBox.classList.add('is-open')
-    closeBtn.addEventListener('click', onCloseBtnClick);
-}
-
-function onCloseBtnClick() {
-    divBox.classList.remove('is-open')
-    resImg.src=''
-    resImg.alt=''
-    // window.removeEventListener('keydown', onEscKeyPress)
 }
 
 backdropDiv.addEventListener('click', onBackdropClick)
 function onBackdropClick(ev) {
     if(ev.currentTarget === ev.target) {
-        onCloseBtnClick()
+        divBox.classList.remove('is-open')
+        resImg.src=''
+        resImg.alt=''
     }
 }
