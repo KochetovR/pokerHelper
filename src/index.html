@@ -11,37 +11,72 @@
       crossorigin="anonymous"
     />
   </head>
-  <header>
+  <body>
+    <button class="home__btn visually-hidden" type="button" >
+      <svg class="home__icon">
+        <use href="./images/symbol.svg#aces"></use>
+      </svg>
+    </button>
     <ul class="header__list container">
       <li class="header__item">
-        <button type="button" data="bb-def" class="header__btn bb-def">BB def</button>
+        <button type="button" data="sqz" class="header__btn sqz">Squeeze
+          <svg class="button__icon">
+            <use href="./images/symbol.svg#ace-h"></use>
+          </svg>
+        </button>
       </li>
       <li class="header__item">
-        <button type="button" data="bvb" class="header__btn bvb">BvB</button>
+        <button type="button" data="vs-open" class="header__btn vs-open">vsOpen
+          <svg class="button__icon">
+            <use href="./images/symbol.svg#ace-d"></use>
+          </svg>
+        </button>
       </li>
       <li class="header__item">
-        <button type="button" data="vs-open" class="header__btn vs-open">vsOpen</button>
+        <button type="button" data="vs3bet" class="header__btn vs3bet">vs3Bet
+          <svg class="button__icon">
+            <use href="./images/symbol.svg#ace-s"></use>
+          </svg>
+        </button>
       </li>
       <li class="header__item">
-        <button type="button" data="vs3bet" class="header__btn vs3bet">vs3Bet</button>
+        <button type="button" data="bb-def" class="header__btn bb-def">BB def
+          <svg class="button__icon">
+            <use href="./images/symbol.svg#ace-c"></use>
+          </svg>
       </li>
       <li class="header__item">
-        <button type="button" data="push-fold" class="header__btn push-fold">Push/Fold</button>
+        <button type="button" data="push-fold" class="header__btn push-fold">Push
+          <svg class="button__icon-push">   
+            <use href="./images/symbol.svg#all-in"></use>
+          </svg>
+        </button>
       </li>
       <li class="header__item">
-        <button type="button" data="sqz" class="header__btn sqz">SQZ</button>
-      </li>
+        <button type="button" data="bvb" class="header__btn bvb">BvB
+          <svg class="button__icon-bvb">
+            <use href="./images/symbol.svg#chips"></use>
+          </svg>
+        </button>
+      </li>      
       <li class="header__item">
-        <button type="button" data="rfi" class="header__btn rfi">RFI</button>
+        <button type="button" data="rfi" class="header__btn rfi">RFI
+          <svg class="button__icon-rfi">
+            <use href="./images/symbol.svg#magic-trick"></use>
+          </svg>
+        </button>
       </li>
     </ul>
-  </header>
-  <body>
-    
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <!-- <include src="./partials/example.html"></include> -->
-
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <div class="js-box container">
+      <div class="lightbox js-lightbox">
+        <div class="lightbox__overlay"></div>
+          
+        <div class="lightbox__content">
+          <img class="lightbox__image" src="" alt="resault content" />
+        </div>
+      </div>
+    </div>
+    <div class="js-box-content"></div>
     <script src="./index.js"></script>
   </body>
 </html>
