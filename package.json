@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://KochetovR.github.io/testApp",
+  "homepage": "https://KochetovR.github.io/pokerHelper",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /testApp/"
+    "build": "parcel build src/*.html --public-url /pokerHelper/"
   },
   "repository": {
     "type": "git",
